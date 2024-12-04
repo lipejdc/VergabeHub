@@ -1,0 +1,64 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-title {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.getnotices-btn {
+    background-color: #753bbd;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 1rem;
+    border: 1px solid #753bbd;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+    .getnotices-btn:after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        background: #fff;
+        position: absolute;
+        left: 0px;
+        top: 0;
+        -webkit-transition: width 0.4s;
+        transition: width 0.4s;
+        z-index: 1;
+        opacity: 1;
+    }
+
+    .getnotices-btn span {
+        position: relative;
+        z-index: 2;
+        transition: color 0.4s;
+    }
+
+    .getnotices-btn:hover span {
+        color: #753bbd;
+    }
+
+    .getnotices-btn:hover:after {
+        width: 100%;
+    }
+
+input[type="checkbox"] {
+    border: 0.5px solid grey;
+}
+
+.invalid-feedback {
+    display: none;
+}
+

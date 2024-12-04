@@ -1,0 +1,22 @@
+﻿@using VergabeHub.Models;
+@if (ViewData["tableData"] != null)
+{
+    @foreach (var notice in (List<Notice>)ViewData["tableData"]!)
+    {
+        <tr>
+            <td class="text-center align-middle">@notice.NoticePlatform!.Name</td>
+            <td class="text-center align-middle">@notice.DateOfPublication.ToString("dd.MM.yyyy")</td>
+            <td class="text-center align-middle">@notice.SubmissionDeadline.ToString("dd.MM.yyyy")</td>
+            <td class="text-center align-middle">@notice.ShortDescription</td>
+            <td class="text-center align-middle">@notice.Type!.Type</td>
+            <td class="text-center align-middle">@notice.ContractingAuthority!.Name</td>
+            <td class="text-center align-middle"><b><a href="@notice.Url" target="_blank">Link</a></b></td>
+        </tr>
+    }
+}
+else
+{
+    <tr>
+        <td colspan="7" class="text-center">No notices available</td>
+    </tr>
+}
